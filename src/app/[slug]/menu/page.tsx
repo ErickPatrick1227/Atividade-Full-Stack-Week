@@ -26,7 +26,7 @@ const RestaurantMenuPage = async ({
   const restaurant = await db.restaurant.findUnique({
     where: { slug },
     include: {
-      menuCategory: {
+      menuCategories: {
         include: { products: true },
       },
     },
