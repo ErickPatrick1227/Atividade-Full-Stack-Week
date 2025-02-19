@@ -16,7 +16,7 @@ datasource db {
 model Restaurant {
   id             String         @id @default(uuid())
   name           String
-  slug           String
+  slug           String         @unique
   description    String
   avatarImageUrl String
   coverImageUrl  String
@@ -50,7 +50,7 @@ model Product {
   menuCategoryId String
   createdAt      DateTime       @default(now())
   updateAt       DateTime       @updatedAt
-  orderProducte  OrderProduct[]
+  orderProduct  OrderProduct[]
 }
 
 model Order {
