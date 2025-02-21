@@ -61,7 +61,7 @@ const RestaurantCategories = ({ restaurant }: RestaurantCategoriesProps) => {
 
       <ScrollArea className="w-full">
         <div className="flex w-max space-x-4 p-4 pt-0">
-          {restaurant.menuCategories.map((category: { products: { name: string; id: string; description: string; price: number; imageUrl: string; ingredients: string[]; restaurantId: string; menuCategoryId: string; createdAt: Date; updateAt: Date; }[]; } & { name: string; id: string; restaurantId: string; createdAt: Date; updatedAt: Date; }) => (
+          {restaurant.menuCategories.map((category) => (
             <Button
               onClick={() => handleCategoryClick(category)}
               key={category.id}
